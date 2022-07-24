@@ -27,6 +27,31 @@ public class Graphics : MonoBehaviour
         {
             vsyncTog.isOn = true;
         }
+
+        bool foundRes = false;
+        for(int i = 0; i < resolutions.Count; i++)
+        {
+            if(Screen.width == resolutions[i].horizontal && Screen.height == resolutions[i].vertical)
+            {
+                foundRes = true;
+
+                selectedResolution = i;
+
+                UpdateResLabel();
+            }
+        }
+
+        if (!foundRes)
+        {
+            ResItem newRes = new ResItem();
+            newRes.horizontal = Screen.width;
+            newRes.vertical = Screen.height;
+
+            resolutions.Add(newRes);
+            selectedResolution = resolutions.Count - 1;
+
+            UpdateResLabel();
+        }
     }
 
     // Update is called once per frame
