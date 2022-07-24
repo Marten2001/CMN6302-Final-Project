@@ -2,10 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Graphics : MonoBehaviour
 {
     public Toggle fullscreenTog, vsyncTog;
+
+    public List<ResItem> resolutions = new List<ResItem>();
+
+    private int selectedResolution;
+
+    public TMP_Text resolutionLabel;
 
     // Start is called before the first frame update
     void Start()
@@ -28,9 +35,40 @@ public class Graphics : MonoBehaviour
 
     }
 
+    //increases the quality values.
+    public void ResLeft()
+    {
+        selectedResolution--;
+        if (selectedResolution < 0)
+        {
+            selectedResolution = 0;
+        }
+
+        UpdateResLabel();
+    }
+
+    //Lowers the quality values.
+    public void ResRight()
+    {
+        selectedResolution++;
+        if(selectedResolution > resolutions.Count - 1)
+        {
+            selectedResolution = resolutions.Count - 1;
+        }
+
+        UpdateResLabel();
+    }
+
+    //Changes the information shown on the resolution option.
+    public void UpdateResLabel()
+    {
+        resolutionLabel.text = resolutions[selectedResolution].horizontal.ToString() + " X " + resolutions[selectedResolution].vertical.ToString();
+    }
+
+    //Adds the functions of applying the set graphics once the button is pressed.
     public void ApplyGraphics()
     {
-        Screen.fullScreen = fullscreenTog.isOn;
+        //Screen.fullScreen = fullscreenTog.isOn;
 
         if (vsyncTog.isOn)
         {
@@ -40,5 +78,14 @@ public class Graphics : MonoBehaviour
         {
             QualitySettings.vSyncCount = 0;
         }
+
+        Screen.SetResolution(resolutions[selectedResolution].horizontal, resolutions[selectedResolution].vertical, fullscreenTog.isOn);
     }
+
+}
+
+[System.Serializable]
+public class ResItem
+{
+    public int horizontal, vertical;
 }
