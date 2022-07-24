@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class UIButtons : MonoBehaviour
 {
-    
+    void Start()
+    {
+        
+    }
     public void StartGame()
     {
         SceneManager.LoadScene("SampleScene");

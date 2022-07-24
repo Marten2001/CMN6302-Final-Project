@@ -346,6 +346,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1101658892988110355, guid: 445748475d7393c4da409b1fda441df6, type: 3}
   m_PrefabInstance: {fileID: 1101658892766706274}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &28060490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28060489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4856f282f6f2543a1d60c948f70ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &32887970 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 142088, guid: b2b198fe16deabc4381aadb7da5d00e9, type: 3}
@@ -422,6 +434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HairyMan
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a85ca7cbfc1a592438ca795929e9e5f6, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: a85ca7cbfc1a592438ca795929e9e5f6, type: 3}
       propertyPath: m_Controller
       value: 
@@ -430,7 +446,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: fc0d22c813bd8bf43993946abd4e9057, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: a85ca7cbfc1a592438ca795929e9e5f6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a85ca7cbfc1a592438ca795929e9e5f6, type: 3}
 --- !u!1001 &169398556
 PrefabInstance:
@@ -6239,6 +6256,32 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &1522909263
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522909257}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 2.61
+  m_Height: 18.61
+  m_Direction: 1
+  m_Center: {x: 0, y: 8.35, z: 0}
+--- !u!114 &1522909264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522909257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cfa125e21066364aad364263c5ac701, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1529729713 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 467772, guid: b2b198fe16deabc4381aadb7da5d00e9, type: 3}
