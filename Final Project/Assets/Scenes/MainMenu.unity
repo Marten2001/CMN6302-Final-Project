@@ -539,7 +539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6402094775781867188, guid: 6af93f003cf35e14bbe8539f009a704f, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6402094775781867188, guid: 6af93f003cf35e14bbe8539f009a704f, type: 3}
       propertyPath: m_LocalScale.x
@@ -2122,7 +2122,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: HairyMan
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: a85ca7cbfc1a592438ca795929e9e5f6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a85ca7cbfc1a592438ca795929e9e5f6, type: 3}
 --- !u!1 &1996193897
 GameObject:

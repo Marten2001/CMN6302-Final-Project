@@ -4463,6 +4463,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0afe4721f85538046bde7f8f5fd44c65, type: 3}
   m_PrefabInstance: {fileID: 1004335463}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1061507150 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5586963862858925584, guid: a85ca7cbfc1a592438ca795929e9e5f6, type: 3}
+  m_PrefabInstance: {fileID: 147092541}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1061507152
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061507150}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: a85ca7cbfc1a592438ca795929e9e5f6, type: 3}
+  m_Controller: {fileID: 9100000, guid: da29cdd5d83b3374f847fe1a5c145ac4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1072452572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6282,6 +6307,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cfa125e21066364aad364263c5ac701, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1522909266
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522909257}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e67fc8b6c00ceb34eaf3e49ca95f1452, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1529729713 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 467772, guid: b2b198fe16deabc4381aadb7da5d00e9, type: 3}
