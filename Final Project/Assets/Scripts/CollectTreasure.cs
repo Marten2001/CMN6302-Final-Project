@@ -16,7 +16,10 @@ public class CollectTreasure : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(inReach && Input.GetKeyDown("e"))
+        {
+
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -35,5 +38,10 @@ public class CollectTreasure : MonoBehaviour
             inReach = false;
             collectText.SetActive(false);
         }
+    }
+
+    private void CollectTrs()
+    {
+
     }
 }
