@@ -50,7 +50,7 @@ public class AIWander : MonoBehaviour
             return;
         }
 
-        agent.SetDestination(RandomNavSphere(transform.position, 30.0f, floorMask));
+        agent.SetDestination(RandomNavSphere(transform.position, 50.0f, floorMask));
         curStates = AIStates.Wandering;
         
 
@@ -63,7 +63,7 @@ public class AIWander : MonoBehaviour
             return;
         }
 
-        waitTimer = Random.Range(1.0f, 5.0f);
+        waitTimer = Random.Range(1.0f, 4.0f);
         curStates = AIStates.Idle;
         
       
