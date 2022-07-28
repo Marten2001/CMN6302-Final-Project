@@ -9,18 +9,21 @@ public class PlayerController : MonoBehaviour
 
     public float MouseSensitivity;
     public float movementSpeed;
+    public AudioSource playerFootsteps;
     private float gravity = -9.81f;
 
     private Vector3 Velocity;
     private Vector3 playerMovementInput;
     private Vector2 playerMouseInput;
     private float CamXRotation;
+    private bool isMoving;
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        isMoving = false;
     }
 
     // Update is called once per frame
@@ -31,6 +34,16 @@ public class PlayerController : MonoBehaviour
 
         Movement();
         Look();
+
+        if (Input.GetKey(KeyCode.W) || (Input.GetKey(KeyCode.A)) || (Input.GetKey(KeyCode.S)) || (Input.GetKey(KeyCode.D)))
+        {
+            playerFootsteps.enabled = true;
+        }
+        else
+        {
+            playerFootsteps.enabled = false;
+        }
+  
     }
 
     void Movement()
@@ -48,6 +61,8 @@ public class PlayerController : MonoBehaviour
 
         playerController.Move(MoveVector * movementSpeed * Time.deltaTime);
         playerController.Move(Velocity * Time.deltaTime);
+        
+        
     }
 
     void Look()
