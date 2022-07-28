@@ -6,6 +6,7 @@ public class CollectChalise : MonoBehaviour
 {
     public bool inReach;
     public GameObject collectText;
+    public AudioSource treasurePick;
   
 
     // Start is called before the first frame update
@@ -47,6 +48,7 @@ public class CollectChalise : MonoBehaviour
     {
         CollectingTreasure.colNum++;
         Destroy(gameObject);
+        treasurePick.Play();
         inReach = false;
         collectText.SetActive(false);
 
