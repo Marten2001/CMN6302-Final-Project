@@ -6,6 +6,7 @@ public class OpenDoor : MonoBehaviour
 {
     public Animator door;
     public GameObject openText;
+    public AudioSource doorOpenAud;
 
     public bool inReach;
 
@@ -21,6 +22,7 @@ public class OpenDoor : MonoBehaviour
         if(inReach && Input.GetKeyDown("e"))
         {
             doorOpen();
+            doorOpenAud.Play();
         }
         else
         {
